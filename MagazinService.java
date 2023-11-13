@@ -27,6 +27,10 @@ public class MagazinService {
         }
     }
 
+    public void afiseazaNrVanzari(){
+        System.out.println(tranzactie.size());
+    }
+
     public void afiseazaRaportNrVanzariPerProdus() {
         for (Map.Entry<String, Integer> entry  : nrVanzariPerProdus.entrySet()) {
             System.out.print("Produsul: " + entry.getKey());
@@ -54,7 +58,11 @@ public class MagazinService {
                 sumaVanzari = sumaVanzari + preturi.get(produs);
             }
         }
-
         System.out.println("Produsul " + produs + " suma: " + sumaVanzari);
+    }
+    public void afisareProduse(){
+        for (String produs: produse){
+            System.out.println(produs);
+        }
     }
 }
